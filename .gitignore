@@ -9,3 +9,4 @@ externalpublic/
 *.csv
 .idea
 *.iml
+system.properties
