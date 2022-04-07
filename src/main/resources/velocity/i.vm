@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>SparkProgram</title>
+    <link rel="stylesheet" href="site.css"></head>
+    <script src="jquery-3.5.1.js"></script>
+<body>
+
+Hello EveryOne<br>
+<p>This is a very basic program to illustrate the use of <a href="https://sparkjava.com/">SparkJava</a></p>
+
+<p>Click <a href="upload.html">here</a> to go to upload a file</p>
+
+<p>Profile upload for <a href="entry.html">new member</a></p>
+<p>Profile page for <a href="profile.html">Ciaren</a></p>
+
+</body>
+</html>
+
+
+
+
