@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Upload a file</title>
+    <meta charset="UTF-8">
+    <script src="jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="site.css"></head>
+</head>
+
+<body>
+    <div class="buttonwrapper">
+        <a class="squarebutton help_button" href="/"><span>Back</span></a>
+    </div><br/>
+
+    <form method='post' enctype='multipart/form-data' action='/upload'>
+        <input type='file' name='uploaded_file'>
+        <button>Upload picture</button>
+    </form>
+    <label for="file_list">Uploaded files:</label>
+    <div id="file_list" name="file_list">
+
+    </div>
+
+    <script>
+        // Function for deleting a file
+        function deletePicture(filename) {
+            console.log(filename);
+            $.ajax({
+                url: "/deleteFileName",
+                type: "POST",
+                dataType: "json",
+                data: {"filename": filename},
+                success: function (response) {
+                    console.log("Deleted " + filename);
+                    location.reload();
+                },
+                error: function (response) {
+                    console.log(response);
+                }
+            });
+        }
+
+        // ONCE THE DOCUMENT IS FULLY LOADED
+        $(document).ready(function() {
+            //AJAX CALL FOR POPULATING PHOTO FILENAMES
+            $.ajax({
+                url: "/getFileNames",
+                type: "POST",
+                dataType: "json",
+                data: {},
+                success: function (response) {
+                    console.log("SUCCESS");
+                    let file_list_div = $("#file_list");
+                    for (let fileobject of response.FileNames) {
+                        file_list_div.append("<a href='" + fileobject.FileName + "'>" + fileobject.FileName + "</a>");
+                        file_list_div.append("&nbsp;&nbsp;&nbsp;&nbsp;<a href='#' onclick='deletePicture(\"" + fileobject.FileName + "\")'>delete</a>");
+                        file_list_div.append("<br>");
+                    }
+                },
+                error: function (response) {
+                    console.log("ERROR");
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

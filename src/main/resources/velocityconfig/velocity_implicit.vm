@@ -1,0 +1,3 @@
+#* @implicitly included *#
+#* @vtlvariable name="WebPath" type="app.util.Path.Web" *#
+#* @vtlvariable name="msg" type="app.util.MessageBundle" *#

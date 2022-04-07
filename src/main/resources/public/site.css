@@ -1,0 +1,149 @@
+.div-table {
+    display         : table;
+    width           : 100%;
+    background-color: #ffffff;
+    border          : 1px solid #666666;
+    border-spacing  : 5px;
+    /* cellspacing  :poor IE support for  this */
+    empty-cells     : show;
+}
+
+.div-table-auto {
+    display         : table;
+    width           : auto;
+    background-color: #ffffff;
+    border          : 1px solid #666666;
+    border-spacing  : 5px;
+    /* cellspacing  :poor IE support for  this */
+    empty-cells     : show;
+}
+
+.div-table-row {
+    display: table-row;
+    width  : auto;
+    clear  : both;
+}
+
+.div-table-col-100 {
+    float           : left;
+    /* fix for  buggy browsers */
+    display         : table-cell;
+    width           : 100px;
+    background-color: #ffffff;
+}
+
+.div-table-col {
+    float           : left;
+    /* fix for  buggy browsers */
+    display         : table-cell;
+    background-color: #ffffff;
+}
+
+.div-texttable-col {
+    float           : left;
+    /* fix for  buggy browsers */
+    display         : table-cell;
+    width           : 200px;
+    background-color: #ffffff;
+}
+
+.double {
+    display         : table-cell;
+    width           : 50%;
+    background-color: #ffffff;
+}
+
+.fullwidthrow{
+    display: table-row;
+    width:100%;
+    background-color:#ffffff;
+}
+.fullwidthcol{
+    display: table-cell;
+    width:100%;
+    background-color:#ffffff;
+}
+
+.popup {
+    display      : none;
+    position     : fixed;
+    overflow     : scroll;
+    max-height   : 80%;
+    top          : 50%;
+    -ms-transform: translateY(-50%);
+    transform    : translateY(-50%);
+    z-index: 1;
+}
+
+.reference_container {
+    float: left;
+    border: 1px solid black;
+}
+
+.help_close_button {
+    width: 100%;
+}
+
+.map-button-container img, .structure_type_button, .tooling_type_button {
+    cursor: pointer;
+}
+
+.help_button {
+    width  : fit-content;
+    float  : left;
+    padding: 0;
+    margin : 0;
+    border : 0;
+}
+
+a.squarebutton {
+    background     : transparent url('images/buttons2/square-blue-left.gif') no-repeat top left;
+    /**display        : block;*/
+    float          : left;
+    font           : normal 12px Arial;
+    /* Change 12px as desired */
+    line-height    : 15px;
+    /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 23px) */
+    height         : 23px;
+    /* Height of button background height */
+    padding-left   : 9px;
+    /* Width of left menu image */
+    text-decoration: none;
+}
+
+a:link.squarebutton,
+a:visited.squarebutton,
+a:active.squarebutton {
+    color: #494949;
+    /*button text color*/
+}
+
+a.squarebutton span {
+    background: transparent url('images/buttons2/square-blue-right.gif') no-repeat top right;
+    display   : block;
+    padding   : 4px 9px 4px 0;
+    /*Set 9px below to match value of 'padding-left' value above*/
+}
+
+a.squarebutton:hover {
+    /* Hover state CSS */
+    background-position: bottom left;
+    cursor: pointer;
+}
+
+a.squarebutton:hover span {
+    /* Hover state CSS */
+    background-position: bottom right;
+    color              : black;
+}
+
+.buttonwrapper {
+    /* Container you can use to surround a CSS button to clear float */
+    overflow: hidden;
+    /*See   : http://www.quirksmode.org/css/clearing.html */
+    width   : 100%;
+}
+
+#filenames {
+    width:300px;
+}
